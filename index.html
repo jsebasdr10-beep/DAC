@@ -7,214 +7,249 @@
 <meta name="description" content="Dos días para entender tu crédito, ordenar tu negocio y trazar tu camino hacia el capital. Sábado 6 y domingo 7 de marzo de 2027 en Queens, Nueva York.">
 <meta property="og:title" content="Despierta al Capital 2027">
 <meta property="og:description" content="Dos días para pasar del crédito al capital. 6 y 7 de marzo de 2027, Queens, NY.">
-<meta property="og:image" content="assets/web/amanecer-empire.jpg">
+<meta property="og:image" content="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta name="theme-color" content="#020202">
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
+/* Paleta oficial: Manual de Identidad Capital Path 2026 */
 :root{
-  --carbon:#1A1614;
-  --carbon-2:#26201D;
-  --rojo:#B3121F;
-  --rojo-vivo:#E01E26;
-  --ambar:#F2A93B;
-  --piedra:#EFECE8;
+  --rojo:#BA1721;          /* Rojo institucional primario */
+  --rojo-2:#940B15;        /* Rojo institucional secundario */
+  --rojo-apoyo:#BE161B;    /* Rojo de apoyo digital */
+  --rojo-profundo:#450202; /* Rojo oscuro profundo */
+  --negro:#020202;         /* Gris neutro oscuro */
+  --gris:#F3F1F1;
   --blanco:#FFFFFF;
-  --tinta:#5A524D;
-  --display:"Archivo","Arial Narrow",sans-serif;
-  --texto:"Source Serif 4",Georgia,serif;
-  --ancho:1180px;
+  --tinta:#4E4747;
+  --degradado:linear-gradient(120deg,#940B15 0%,#BA1721 100%);
+  /* Tipografía oficial: SF Pro (principal) y Montserrat (secundaria) */
+  --titulos:"SF Pro Display",-apple-system,BlinkMacSystemFont,"Montserrat","Segoe UI",sans-serif;
+  --texto:"SF Pro Text",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Montserrat",sans-serif;
+  --apoyo:"Montserrat","SF Pro Display",sans-serif;
+  --ancho:1200px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--blanco);color:var(--carbon);font-family:var(--texto);font-size:1.125rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--blanco);color:var(--negro);font-family:var(--texto);font-size:1.0625rem;line-height:1.7;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--ambar);outline-offset:3px}
+:focus-visible{outline:3px solid var(--rojo-apoyo);outline-offset:3px}
 .envoltura{width:min(var(--ancho),100% - 3rem);margin-inline:auto}
-h1,h2,h3{font-family:var(--display);font-stretch:68%;font-weight:850;line-height:.95;letter-spacing:-.01em;margin:0}
-h2{font-size:clamp(2.6rem,6vw,4.6rem)}
-h3{font-size:1.9rem;font-stretch:75%;font-weight:800;line-height:1.05}
+h1,h2,h3{font-family:var(--titulos);font-weight:800;line-height:1.02;letter-spacing:-.025em;margin:0}
+h2{font-size:clamp(2.3rem,5vw,3.9rem)}
+h3{font-size:1.5rem;letter-spacing:-.015em;line-height:1.15}
 p{margin:0 0 1em;max-width:62ch}
+.foto{width:100%;height:100%;object-fit:cover}
 
 /* Botones */
-.boton{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--display);font-stretch:90%;font-weight:700;font-size:1.05rem;text-decoration:none;padding:1rem 1.6rem;border-radius:999px;background:var(--rojo);color:var(--blanco);border:2px solid var(--rojo);cursor:pointer;transition:background .2s,border-color .2s}
-.boton:hover{background:var(--rojo-vivo);border-color:var(--rojo-vivo)}
-.boton.claro{background:transparent;border-color:currentColor;color:inherit}
-.boton.claro:hover{background:rgba(255,255,255,.08)}
+.boton{display:inline-flex;align-items:center;justify-content:center;font-family:var(--apoyo);font-weight:700;font-size:.98rem;text-decoration:none;padding:1rem 1.7rem;border-radius:999px;background:var(--rojo);color:var(--blanco);border:2px solid var(--rojo);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.boton:hover{background:var(--rojo-2);border-color:var(--rojo-2)}
+.boton.claro{background:transparent;border-color:rgba(255,255,255,.7);color:var(--blanco)}
+.boton.claro:hover{background:var(--blanco);color:var(--negro);border-color:var(--blanco)}
 
-/* Barra */
-.barra{position:fixed;inset:0 0 auto;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 1.5rem;color:var(--blanco);transition:background .3s}
-.barra.solida{background:rgba(26,22,20,.94);backdrop-filter:blur(8px)}
-.barra img{height:34px;width:auto;mix-blend-mode:screen;transition:opacity .3s}
-.barra:not(.solida) img{opacity:0}
-.barra nav{display:flex;gap:1.6rem;font-family:var(--display);font-stretch:90%;font-weight:600;font-size:.98rem}
-.barra nav a{text-decoration:none;opacity:.85}
-.barra nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
-.barra .boton{padding:.6rem 1.1rem;font-size:.95rem}
-@media (max-width:860px){.barra nav{display:none}}
+/* Barra superior */
+.barra{position:fixed;inset:0 0 auto;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.75rem clamp(1rem,3vw,2rem);color:var(--blanco);transition:background .3s,box-shadow .3s}
+.barra.solida{background:rgba(2,2,2,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.barra .marca img{height:38px;width:auto}
+.barra nav{display:flex;gap:1.8rem;font-family:var(--apoyo);font-weight:600;font-size:.92rem}
+.barra nav a{text-decoration:none;opacity:.82}
+.barra nav a:hover{opacity:1}
+.barra .boton{padding:.6rem 1.15rem;font-size:.88rem}
+@media (max-width:900px){.barra nav{display:none}}
 
 /* Portada */
-.portada{display:grid;grid-template-columns:1.05fr .95fr;min-height:100svh;background:var(--carbon);color:var(--blanco)}
-.portada-texto{display:flex;flex-direction:column;justify-content:center;padding:7.5rem clamp(1.5rem,5vw,5rem) 4rem}
-.portada-texto .logo{width:min(440px,90%);mix-blend-mode:screen;margin-bottom:2.2rem}
-.portada h1{font-size:clamp(3rem,6.4vw,5.6rem);margin-bottom:1.6rem}
-.portada .bajada{font-size:1.25rem;color:#E7E1DC;max-width:34ch}
-.cuando{display:flex;flex-wrap:wrap;gap:.4rem 2.2rem;margin:1.8rem 0 2.4rem;font-family:var(--display);font-stretch:85%;font-size:1.15rem}
-.cuando strong{display:block;font-weight:800;font-size:1.5rem;color:var(--blanco)}
-.cuando span{color:#BDB4AD}
+.portada{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--blanco);background:var(--negro);overflow:hidden}
+.portada > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.portada::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,2,2,.94) 0%,rgba(2,2,2,.72) 42%,rgba(69,2,2,.15) 100%),linear-gradient(0deg,rgba(2,2,2,.85) 0%,rgba(2,2,2,0) 45%)}
+.portada-texto{position:relative;z-index:1;padding:8rem 0 4.5rem}
+.portada .logo{width:min(380px,78vw);margin-bottom:2rem}
+.portada h1{font-size:clamp(2.6rem,6vw,5.2rem);max-width:15ch;margin-bottom:1.4rem}
+.portada .bajada{font-size:1.2rem;color:#E9E2E2;max-width:40ch}
+.cuando{display:flex;flex-wrap:wrap;gap:1rem 3rem;margin:2rem 0 2.4rem;padding-top:1.6rem;border-top:1px solid rgba(255,255,255,.18);max-width:640px}
+.cuando strong{display:block;font-family:var(--titulos);font-weight:700;font-size:1.35rem;letter-spacing:-.01em}
+.cuando span{color:#BDB3B3;font-size:.98rem}
 .acciones{display:flex;flex-wrap:wrap;gap:.8rem}
-.portada-foto{position:relative;overflow:hidden}
-.portada-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
-.portada-foto figcaption{position:absolute;left:1.2rem;bottom:1rem;font-size:.85rem;color:rgba(255,255,255,.8);font-style:italic}
-@media (max-width:860px){
-  .portada{grid-template-columns:1fr}
-  .portada-foto{order:-1;height:46vh}
-  .portada-texto{padding-top:2.5rem}
-}
 
 /* Carta */
-.carta{padding:clamp(4.5rem,10vw,8rem) 0;background:var(--blanco)}
-.carta .envoltura{display:grid;grid-template-columns:280px 1fr;gap:clamp(2rem,6vw,6rem);align-items:start}
+.carta{padding:clamp(4.5rem,10vw,8rem) 0}
+.carta .envoltura{display:grid;grid-template-columns:minmax(240px,360px) 1fr;gap:clamp(2rem,6vw,6rem);align-items:start}
 .carta figure{margin:0;position:sticky;top:6rem}
-.carta figure img{border-radius:6px;filter:saturate(.9)}
-.carta figcaption{font-family:var(--display);font-stretch:85%;font-size:1rem;margin-top:.8rem;color:var(--tinta)}
-.carta figcaption b{display:block;color:var(--carbon);font-size:1.15rem}
+.carta figure img{border-radius:4px;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%}
+.carta figcaption{font-size:.95rem;margin-top:.9rem;color:var(--tinta)}
+.carta figcaption b{display:block;color:var(--negro);font-family:var(--titulos);font-size:1.1rem}
 .carta h2{margin-bottom:2rem;max-width:14ch}
-.carta .cuerpo p{font-size:1.2rem}
-.firma{font-family:var(--texto);font-style:italic;font-size:1.35rem;margin-top:1.5rem}
-@media (max-width:760px){.carta .envoltura{grid-template-columns:1fr}.carta figure{position:static;max-width:220px}}
+.carta .cuerpo p{font-size:1.15rem}
+.firma{margin-top:2rem}
+.firma img{width:220px;height:auto;margin-top:.4rem}
+.firma span{display:block;font-size:.95rem;color:var(--tinta);margin-top:.3rem}
+@media (max-width:780px){.carta .envoltura{grid-template-columns:1fr}.carta figure{position:static;max-width:260px}}
 
 /* Para ti */
-.para-ti{background:var(--piedra);padding:clamp(4.5rem,9vw,7rem) 0}
+.para-ti{background:var(--gris);padding:clamp(4.5rem,9vw,7rem) 0}
 .para-ti .envoltura{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem)}
-.para-ti h2{max-width:11ch}
+.para-ti h2{max-width:11ch;margin-bottom:1.5rem}
 .para-ti ul{list-style:none;margin:0;padding:0}
-.para-ti li{padding:1.1rem 0;border-bottom:1px solid #D6D0CA;font-size:1.15rem}
+.para-ti li{padding:1.1rem 0 1.1rem 1.6rem;border-bottom:1px solid #DCD6D6;font-size:1.1rem;position:relative}
+.para-ti li::before{content:"";position:absolute;left:0;top:1.85rem;width:9px;height:9px;border-radius:50%;background:var(--rojo)}
 .para-ti li:first-child{padding-top:0}
-.situaciones{margin-top:2rem;color:var(--tinta);font-size:1rem}
-@media (max-width:760px){.para-ti .envoltura{grid-template-columns:1fr}}
+.para-ti li:first-child::before{top:.75rem}
+.situaciones{color:var(--tinta)}
+@media (max-width:780px){.para-ti .envoltura{grid-template-columns:1fr}}
 
-/* Carretera: el recorrido de los dos días */
-.recorrido{background:var(--carbon);color:var(--blanco);padding:clamp(4.5rem,10vw,8rem) 0 clamp(3rem,6vw,5rem)}
-.recorrido .intro{max-width:40rem;margin-bottom:4rem}
-.recorrido .intro h2{margin-bottom:1.5rem}
-.para-ti h2,.llevas h2,.preguntas h2{margin-bottom:.5rem}
-.recorrido .intro p{color:#D9D1CB;font-size:1.2rem}
-.via{position:relative;padding-left:120px}
-.via::before{content:"";position:absolute;left:28px;top:0;bottom:0;width:64px;background:var(--carbon-2);border-left:3px solid #4A403B;border-right:3px solid #4A403B}
-.via::after{content:"";position:absolute;left:58px;top:0;bottom:0;width:4px;background:repeating-linear-gradient(var(--ambar) 0 26px,transparent 26px 50px);transform-origin:top;animation:trazar 2.2s ease-out both;animation-timeline:view();animation-range:entry 0% cover 60%}
-@keyframes trazar{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-@media (prefers-reduced-motion:reduce){.via::after{animation:none}}
-.parada{position:relative;padding:0 0 4.5rem}
-.parada::before{content:"";position:absolute;left:-104px;top:.35rem;width:32px;height:32px;border-radius:50%;background:var(--carbon);border:4px solid var(--ambar)}
-.parada.grande::before{background:var(--rojo);border-color:var(--blanco);width:40px;height:40px;left:-108px}
-.parada .cuando-p{font-family:var(--display);font-stretch:85%;font-weight:600;color:var(--ambar);font-size:1.05rem;margin-bottom:.4rem;display:block}
-.parada h3{font-size:clamp(2.2rem,4.6vw,3.4rem);font-stretch:68%;font-weight:850;margin-bottom:1rem}
-.parada p{color:#D9D1CB}
-.parada .temas{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0 0;padding:0;list-style:none}
-.parada .temas li{font-family:var(--display);font-stretch:90%;font-size:.95rem;padding:.35rem .85rem;border:1px solid #5B504A;border-radius:999px;color:#EDE6E0}
-.parada.chica h3{font-size:1.8rem;font-stretch:75%}
-.dia-foto{margin:2rem 0 0;max-width:560px}
-.dia-foto img{border-radius:6px;aspect-ratio:16/9;object-fit:cover;width:100%}
+/* Recorrido: los dos días como una carretera */
+.recorrido{background:var(--negro);color:var(--blanco)}
+.recorrido-cabecera{position:relative;padding:clamp(6rem,14vw,10rem) 0 clamp(3rem,6vw,5rem);overflow:hidden}
+.recorrido-cabecera > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.recorrido-cabecera::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--negro) 2%,rgba(2,2,2,.55) 55%,rgba(2,2,2,.35) 100%)}
+.recorrido-cabecera .envoltura{position:relative;z-index:1}
+.recorrido-cabecera p{color:#E3DBDB;font-size:1.2rem;margin-top:1.4rem;max-width:44ch}
+.via{position:relative;padding:3rem 0 4rem 130px}
+.via::before{content:"";position:absolute;left:30px;top:0;bottom:0;width:70px;background:#181314;border-left:3px solid #3A3030;border-right:3px solid #3A3030}
+.via::after{content:"";position:absolute;left:63px;top:0;bottom:0;width:4px;background:repeating-linear-gradient(#FFFFFF 0 28px,transparent 28px 54px);opacity:.85}
+.parada{position:relative;padding-bottom:4.5rem}
+.parada::before{content:"";position:absolute;left:-111px;top:.3rem;width:34px;height:34px;border-radius:50%;background:var(--negro);border:4px solid var(--blanco)}
+.parada.grande::before{background:var(--rojo);border-color:var(--rojo);box-shadow:0 0 0 6px rgba(186,23,33,.25);width:42px;height:42px;left:-115px}
+.parada.final{padding-bottom:0}
+.etapa{display:block;font-family:var(--apoyo);font-weight:700;font-size:.95rem;color:#F0A3A7;margin-bottom:.4rem}
+.parada h3{font-size:clamp(2rem,4.2vw,3.2rem);font-weight:800;margin-bottom:1rem}
+.parada.chica h3{font-size:1.65rem}
+.parada p{color:#D8D0D0}
+.temas{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0 0;padding:0;list-style:none}
+.temas li{font-family:var(--apoyo);font-weight:500;font-size:.88rem;padding:.4rem .9rem;border:1px solid #4A3E3E;border-radius:999px;color:#EFE7E7}
+.dia-foto{margin:2rem 0 0;max-width:640px}
+.dia-foto img{border-radius:4px;aspect-ratio:16/9;object-fit:cover;width:100%;background:#181314}
 @media (max-width:600px){
-  .via{padding-left:76px}
-  .via::before{left:10px;width:44px}
-  .via::after{left:30px}
-  .parada::before{left:-78px}
-  .parada.grande::before{left:-82px}
+  .via{padding-left:80px}
+  .via::before{left:10px;width:48px}
+  .via::after{left:32px}
+  .parada::before{left:-83px}
+  .parada.grande::before{left:-87px}
 }
 
 /* Te llevas */
 .llevas{padding:clamp(4.5rem,9vw,7rem) 0}
 .llevas .envoltura{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,6rem);align-items:start}
+.llevas h2{margin-bottom:1.5rem}
+.llevas .lead{color:var(--tinta)}
 .llevas dl{margin:0;display:grid;gap:1.8rem}
-.llevas dt{font-family:var(--display);font-stretch:80%;font-weight:800;font-size:1.45rem}
+.llevas dt{font-family:var(--titulos);font-weight:700;font-size:1.3rem;letter-spacing:-.01em}
 .llevas dd{margin:.2rem 0 0;color:var(--tinta)}
-@media (max-width:760px){.llevas .envoltura{grid-template-columns:1fr}}
+@media (max-width:780px){.llevas .envoltura{grid-template-columns:1fr}}
 
-/* Speakers */
-.voces{background:var(--piedra);padding:clamp(4.5rem,9vw,7rem) 0}
-.voces h2{margin-bottom:1rem}
-.voces .lead{color:var(--tinta);margin-bottom:3rem}
-.voces-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:1.5rem}
-.voz{background:var(--blanco);border-radius:6px;overflow:hidden}
-.voz img{width:100%;aspect-ratio:1/1;object-fit:cover}
-.voz .info{padding:1.3rem 1.4rem 1.6rem}
-.voz h3{font-size:1.7rem}
-.voz p{font-size:1rem;color:var(--tinta);margin:.5rem 0 0}
-.sorpresa{display:flex;flex-direction:column;justify-content:flex-end;background:var(--carbon);color:var(--blanco);min-height:100%}
-.sorpresa .silueta{flex:1;display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:9rem;color:#3A312D;line-height:1;min-height:220px}
-.sorpresa p{color:#C9C0B9}
-@media (max-width:860px){.voces-grid{grid-template-columns:1fr 1fr}.voces-grid .voz:first-child{grid-column:1/-1}}
-@media (max-width:520px){.voces-grid{grid-template-columns:1fr}}
+/* Speakers: carrusel */
+.voces{background:var(--gris);padding:clamp(4.5rem,9vw,7rem) 0 clamp(4rem,8vw,6rem);overflow:hidden}
+.voces-cabecera{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.voces-cabecera p{color:var(--tinta);margin:1rem 0 0}
+.flechas{display:flex;gap:.6rem}
+.flecha{width:54px;height:54px;border-radius:50%;border:2px solid var(--negro);background:transparent;color:var(--negro);cursor:pointer;display:grid;place-items:center;transition:background .2s,color .2s,opacity .2s}
+.flecha:hover:not(:disabled){background:var(--negro);color:var(--blanco)}
+.flecha:disabled{opacity:.25;cursor:default}
+.flecha svg{width:22px;height:22px}
+.escenario{position:relative;height:clamp(600px,64vw,680px);touch-action:pan-y;user-select:none}
+.tarjeta{position:absolute;left:50%;top:0;width:min(560px,86vw);height:100%;transform:translateX(-50%);transition:transform .6s cubic-bezier(.2,.7,.2,1),opacity .6s,filter .6s;display:flex;flex-direction:column;align-items:center;text-align:center}
+.tarjeta[data-pos="izq"]{transform:translateX(calc(-50% - min(470px,72vw))) scale(.78);opacity:.45;filter:grayscale(1)}
+.tarjeta[data-pos="der"]{transform:translateX(calc(-50% + min(470px,72vw))) scale(.78);opacity:.45;filter:grayscale(1)}
+.tarjeta[data-pos="fuera-izq"]{transform:translateX(calc(-50% - min(940px,144vw))) scale(.7);opacity:0}
+.tarjeta[data-pos="fuera-der"]{transform:translateX(calc(-50% + min(940px,144vw))) scale(.7);opacity:0}
+.tarjeta[data-pos="izq"],.tarjeta[data-pos="der"]{cursor:pointer}
+.tarjeta[data-pos^="fuera"]{pointer-events:none}
+.figura{position:relative;flex:1;min-height:0;width:100%;display:flex;align-items:flex-end;justify-content:center}
+.figura::before{content:"";position:absolute;left:50%;bottom:12%;width:min(360px,70vw);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:var(--degradado);box-shadow:0 30px 60px rgba(148,11,21,.28)}
+.figura::after{content:"";position:absolute;left:50%;bottom:1%;width:44%;height:18px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(2,2,2,.3),rgba(2,2,2,0));animation:sombra 6s ease-in-out infinite}
+.figura img{position:relative;z-index:1;height:92%;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 22px 28px rgba(2,2,2,.35));animation:flotar 6s ease-in-out infinite;margin-bottom:5%}
+@keyframes flotar{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes sombra{0%,100%{transform:translateX(-50%) scaleX(1);opacity:1}50%{transform:translateX(-50%) scaleX(.85);opacity:.7}}
+.silueta{position:relative;z-index:1;height:70%;aspect-ratio:3/5;margin-bottom:12%;display:grid;place-items:center;font-family:var(--titulos);font-weight:900;font-size:6rem;color:rgba(255,255,255,.92);animation:flotar 6s ease-in-out infinite}
+.silueta svg{position:absolute;inset:0;width:100%;height:100%}
+.silueta span{position:relative;margin-top:-30%}
+.tarjeta .nombre{margin-top:1.2rem}
+.tarjeta h3{font-size:clamp(1.6rem,3vw,2.1rem)}
+.tarjeta .rol{font-family:var(--apoyo);font-weight:600;color:var(--rojo);font-size:.95rem;margin:.35rem auto .5rem}
+.tarjeta .bio{color:var(--tinta);font-size:1rem;margin:0 auto;max-width:44ch}
+.puntos{display:flex;justify-content:center;gap:.6rem;margin-top:2.2rem}
+.punto{width:10px;height:10px;border-radius:999px;border:0;padding:0;background:#C9C1C1;cursor:pointer;transition:width .3s,background .3s}
+.punto[aria-current="true"]{width:30px;background:var(--rojo)}
+@media (prefers-reduced-motion:reduce){.figura img,.figura::after,.silueta{animation:none}.tarjeta{transition:none}}
+@media (max-width:700px){.tarjeta[data-pos="izq"],.tarjeta[data-pos="der"]{opacity:0;pointer-events:none}}
 
 /* Lugar */
-.lugar{display:grid;grid-template-columns:1fr 1fr;background:var(--rojo);color:var(--blanco)}
-.lugar img{width:100%;height:100%;object-fit:cover;min-height:340px}
+.lugar{display:grid;grid-template-columns:1.1fr .9fr;background:var(--degradado);color:var(--blanco)}
+.lugar figure{margin:0;position:relative;min-height:420px;background:var(--rojo-profundo)}
+.lugar figure img{position:absolute;inset:0}
 .lugar .texto{padding:clamp(3rem,7vw,6rem) clamp(1.5rem,5vw,5rem)}
-.lugar address{font-style:normal;font-size:1.2rem;margin:1.5rem 0}
-.lugar h3{font-size:1.3rem;font-stretch:85%;margin:1.6rem 0 .3rem}
-.lugar p{color:#FBE3E4}
+.lugar address{font-style:normal;font-size:1.15rem;margin:1.5rem 0}
+.lugar h3{font-size:1.15rem;margin:1.6rem 0 .3rem}
+.lugar p{color:#FBE4E5}
 .lugar .boton.claro{margin-top:1rem}
-@media (max-width:760px){.lugar{grid-template-columns:1fr}}
+@media (max-width:780px){.lugar{grid-template-columns:1fr}.lugar figure{min-height:300px}}
 
 /* Entradas */
 .entradas{padding:clamp(4.5rem,9vw,7rem) 0}
 .entradas .lead{color:var(--tinta);margin:1rem 0 3rem}
-.opciones{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:stretch}
-.opcion{border:2px solid var(--carbon);border-radius:10px;padding:2.2rem;display:flex;flex-direction:column}
-.opcion.vip{background:var(--carbon);color:var(--blanco);border-color:var(--carbon)}
-.opcion h3{font-size:2.2rem}
-.precio{font-family:var(--display);font-stretch:70%;font-weight:900;font-size:4.2rem;line-height:1;margin:1.2rem 0 .3rem}
-.precio-nota{font-size:.98rem;color:var(--tinta);margin-bottom:1.6rem}
-.vip .precio-nota{color:#C9C0B9}
+.opciones{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.opcion{border:1.5px solid #D9D2D2;border-radius:14px;padding:2.4rem;display:flex;flex-direction:column}
+.opcion.vip{background:var(--negro);color:var(--blanco);border-color:var(--negro);position:relative;overflow:hidden}
+.opcion.vip::before{content:"";position:absolute;inset:0 0 auto;height:6px;background:var(--degradado)}
+.opcion h3{font-size:1.9rem}
+.precio{font-family:var(--titulos);font-weight:800;font-size:3.8rem;letter-spacing:-.03em;line-height:1;margin:1.2rem 0 .4rem}
+.precio-nota{font-size:.95rem;color:var(--tinta);margin-bottom:1.6rem}
+.vip .precio-nota{color:#BDB3B3}
 .opcion ul{margin:0 0 2rem;padding-left:1.2rem;flex:1}
 .opcion li{margin-bottom:.55rem}
+.opcion li::marker{color:var(--rojo)}
 .opcion .boton{align-self:flex-start}
-.vip .boton{background:var(--blanco);color:var(--carbon);border-color:var(--blanco)}
-.vip .boton:hover{background:var(--ambar);border-color:var(--ambar)}
-@media (max-width:760px){.opciones{grid-template-columns:1fr}}
+.vip .boton{background:var(--blanco);color:var(--negro);border-color:var(--blanco)}
+.vip .boton:hover{background:var(--rojo);color:var(--blanco);border-color:var(--rojo)}
+@media (max-width:780px){.opciones{grid-template-columns:1fr}}
 
 /* Preguntas */
-.preguntas{background:var(--piedra);padding:clamp(4.5rem,9vw,7rem) 0}
+.preguntas{background:var(--gris);padding:clamp(4.5rem,9vw,7rem) 0}
 .preguntas .envoltura{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,6rem)}
-details{border-bottom:1px solid #D6D0CA}
-summary{cursor:pointer;list-style:none;padding:1.2rem 2.5rem 1.2rem 0;position:relative;font-family:var(--display);font-stretch:85%;font-weight:700;font-size:1.3rem}
+.preguntas h2{margin-bottom:1.5rem}
+.preguntas .lead{color:var(--tinta)}
+details{border-bottom:1px solid #D6CFCF}
+summary{cursor:pointer;list-style:none;padding:1.2rem 2.5rem 1.2rem 0;position:relative;font-family:var(--titulos);font-weight:700;font-size:1.15rem;letter-spacing:-.01em}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";position:absolute;right:.2rem;top:.9rem;font-size:1.8rem;font-weight:400;transition:transform .2s}
+summary::after{content:"+";position:absolute;right:.2rem;top:.8rem;font-size:1.7rem;font-weight:400;color:var(--rojo);transition:transform .2s}
 details[open] summary::after{transform:rotate(45deg)}
 details p{color:var(--tinta);padding-bottom:.6rem}
-@media (max-width:760px){.preguntas .envoltura{grid-template-columns:1fr}}
+@media (max-width:780px){.preguntas .envoltura{grid-template-columns:1fr}}
 
 /* Cierre */
-.cierre{position:relative;color:var(--blanco);padding:clamp(6rem,14vw,10rem) 0;overflow:hidden;background:var(--carbon)}
-.cierre img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
-.cierre .envoltura{position:relative}
-.cierre h2{font-size:clamp(2.8rem,7vw,5.6rem);max-width:15ch;margin-bottom:1.5rem}
-.cierre p{font-size:1.25rem;color:#E7E1DC}
+.cierre{position:relative;color:var(--blanco);padding:clamp(7rem,15vw,11rem) 0;overflow:hidden;background:var(--negro)}
+.cierre > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cierre::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,2,2,.9) 0%,rgba(69,2,2,.55) 100%)}
+.cierre .envoltura{position:relative;z-index:1}
+.cierre h2{font-size:clamp(2.6rem,6.5vw,5.2rem);max-width:14ch;margin-bottom:1.4rem}
+.cierre p{font-size:1.2rem;color:#E9E2E2}
 
 /* Pie */
-footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
-.pie-arriba{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;align-items:flex-start;padding-bottom:2.5rem;border-bottom:1px solid #DDD7D1}
-.marcas{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
-.marcas img{mix-blend-mode:multiply}
-.contacto{display:grid;gap:.3rem}
+footer{background:var(--negro);color:#CFC6C6;padding:4.5rem 0 2.5rem;font-size:.95rem}
+.pie-arriba{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2.5rem;align-items:flex-start;padding-bottom:2.5rem;border-bottom:1px solid #2A2222}
+.marcas{display:flex;align-items:center;gap:2.4rem;flex-wrap:wrap}
+.marcas .rehobot{background:var(--blanco);padding:.55rem .9rem;border-radius:6px;box-sizing:content-box}
+.contacto{display:grid;gap:.35rem}
+.contacto strong{color:var(--blanco);font-family:var(--titulos)}
 .contacto a{text-decoration:none}
-.contacto a:hover{text-decoration:underline}
-.aviso{color:var(--tinta);font-size:.88rem;margin-top:2rem;max-width:80ch}
-.pie-abajo{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;margin-top:1.5rem;color:var(--tinta);font-size:.9rem}
+.contacto a:hover{color:var(--blanco);text-decoration:underline}
+.aviso{font-size:.85rem;margin-top:2rem;max-width:84ch;color:#9F9595}
+.creditos{font-size:.8rem;color:#7D7373;max-width:84ch}
+.creditos a{color:#9F9595}
+.pie-abajo{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;margin-top:1.5rem;color:#8E8484;font-size:.85rem}
 
 /* Aviso de pago */
-.toast{position:fixed;left:50%;bottom:1.2rem;transform:translate(-50%,150%);z-index:40;max-width:min(520px,92vw);background:var(--carbon);color:var(--blanco);padding:1rem 1.3rem;border-radius:10px;font-size:1rem;box-shadow:0 10px 30px rgba(0,0,0,.3);transition:transform .3s}
-.toast.visible{transform:translate(-50%,0)}
-.toast a{color:var(--ambar)}
+.toast{position:fixed;left:50%;bottom:1.2rem;transform:translate(-50%,160%);z-index:40;max-width:min(520px,92vw);background:var(--negro);color:var(--blanco);padding:1rem 1.3rem;border-radius:12px;border-left:4px solid var(--rojo);font-size:.98rem;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .3s,opacity .3s,visibility .3s;opacity:0;visibility:hidden}
+.toast.visible{transform:translate(-50%,0);opacity:1;visibility:visible}
+.toast a{color:#F5A9AD}
 </style>
 </head>
 <body>
 
 <header class="barra" id="barra">
-  <a href="#inicio" aria-label="Despierta al Capital, inicio"><img src="assets/web/logo-dac-oscuro.png" alt="Despierta al Capital"></a>
+  <a class="marca" href="#inicio" aria-label="Despierta al Capital, ir al inicio"><img src="assets/web/logo-dac-oscuro.png" alt="Despierta al Capital"></a>
   <nav aria-label="Secciones">
     <a href="#carta">El porqué</a>
     <a href="#recorrido">Los dos días</a>
@@ -228,8 +263,13 @@ footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
 <main id="inicio">
 
   <section class="portada">
-    <div class="portada-texto">
-      <img class="logo" src="assets/web/logo-dac-oscuro.png" alt="Despierta al Capital, Business Experience 2027">
+    <img src="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?auto=format&fit=crop&w=3840&q=80"
+         srcset="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?auto=format&fit=crop&w=1280&q=80 1280w,
+                 https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?auto=format&fit=crop&w=2560&q=80 2560w,
+                 https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?auto=format&fit=crop&w=3840&q=80 3840w"
+         sizes="100vw" alt="El skyline de Nueva York al atardecer visto desde el otro lado del río Hudson" fetchpriority="high">
+    <div class="envoltura portada-texto">
+      <img class="logo" src="assets/web/logo-dac-oscuro.png" alt="Despierta al Capital">
       <h1>Tu crédito cuenta una historia. Ven a escribir el siguiente capítulo.</h1>
       <p class="bajada">Dos días en Nueva York para entender dónde estás, ordenar lo que tienes y salir con un plan para llegar al capital.</p>
       <div class="cuando">
@@ -241,15 +281,12 @@ footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
         <a class="boton claro" href="#recorrido">Ver los dos días</a>
       </div>
     </div>
-    <figure class="portada-foto" style="margin:0">
-      <img src="assets/web/amanecer-empire.jpg" alt="El Empire State al amanecer, con el cielo encendido en rojo sobre Manhattan">
-    </figure>
   </section>
 
   <section class="carta" id="carta">
     <div class="envoltura">
       <figure>
-        <img src="assets/web/gabriel-solis.jpg" alt="Gabriel Solís Moya" width="333" height="323">
+        <img src="assets/web/gabriel-retrato.jpg" alt="Gabriel Solís Moya sentado en una silla de madera, con suéter beige" width="640" height="800" loading="lazy">
         <figcaption><b>Gabriel Solís Moya</b>Fundador y CEO de Rehobot Strategy Corp.</figcaption>
       </figure>
       <div class="cuerpo">
@@ -258,7 +295,11 @@ footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
         <p>A veces es una cuenta en colección que nadie les explicó. A veces es un negocio que factura bien pero que, en papel, no existe. Y casi siempre es la sensación de estar haciendo todo bien y aun así no avanzar.</p>
         <p>Despierta al Capital nació para esa conversación. No es una conferencia donde te sientas a escuchar y te vas. Son dos días con tu reporte en la mano, entendiendo qué dice de ti, qué puedes mover primero y cómo se ve un negocio que está listo para pedir capital.</p>
         <p>No te voy a prometer un número ni una aprobación. Te prometo claridad, y un plan que puedas seguir el lunes.</p>
-        <p class="firma">Nos vemos en Queens,<br>Gabriel</p>
+        <div class="firma">
+          <p style="margin:0">Nos vemos en Queens,</p>
+          <img src="assets/web/firma-gabriel.png" alt="Firma de Gabriel Solís" width="505" height="129" loading="lazy">
+          <span>Gabriel Solís Moya</span>
+        </div>
       </div>
     </div>
   </section>
@@ -280,21 +321,28 @@ footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
   </section>
 
   <section class="recorrido" id="recorrido">
-    <div class="envoltura">
-      <div class="intro">
+    <div class="recorrido-cabecera">
+      <img src="https://images.unsplash.com/photo-1506606401543-2e73709cebb4?auto=format&fit=crop&w=3840&q=80"
+           srcset="https://images.unsplash.com/photo-1506606401543-2e73709cebb4?auto=format&fit=crop&w=1280&q=80 1280w,
+                   https://images.unsplash.com/photo-1506606401543-2e73709cebb4?auto=format&fit=crop&w=2560&q=80 2560w,
+                   https://images.unsplash.com/photo-1506606401543-2e73709cebb4?auto=format&fit=crop&w=3840&q=80 3840w"
+           sizes="100vw" alt="Estelas de luz de los carros en una autopista frente al skyline de Nueva York" loading="lazy">
+      <div class="envoltura">
         <h2>Dos días, un solo camino</h2>
         <p>Lo pensamos como una carretera. Entras con lo que tienes, y en cada tramo vas dejando algo atrás y sumando algo nuevo.</p>
       </div>
+    </div>
 
+    <div class="envoltura">
       <div class="via">
         <div class="parada chica">
-          <span class="cuando-p">Antes de llegar</span>
+          <span class="etapa">Antes de llegar</span>
           <h3>Trae tu reporte</h3>
           <p>Te pediremos tener a mano tu reporte de crédito. Vamos a trabajar con tu situación real, no con ejemplos de libro.</p>
         </div>
 
         <div class="parada grande">
-          <span class="cuando-p">Sábado 6 de marzo</span>
+          <span class="etapa">Sábado 6 de marzo</span>
           <h3>Día 1: Despierta</h3>
           <p>El primer día es para ver con claridad. Leemos el reporte juntos, entendemos qué pesa y qué no, y decidimos qué cuentas atender primero. También miramos tu estructura personal y la de tu negocio, porque una afecta a la otra más de lo que parece.</p>
           <ul class="temas">
@@ -303,17 +351,17 @@ footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
             <li>Estructura personal y de negocio</li>
             <li>Conexiones con la industria</li>
           </ul>
-          <figure class="dia-foto"><img src="assets/web/calle-nyc.jpg" alt="Una avenida de Manhattan de día, con árboles a ambos lados" loading="lazy"></figure>
+          <figure class="dia-foto"><img src="https://images.unsplash.com/photo-1511881830150-850572962174?auto=format&fit=crop&w=2560&q=80" alt="El Empire State iluminado de noche visto desde arriba" loading="lazy"></figure>
         </div>
 
         <div class="parada chica">
-          <span class="cuando-p">Esa noche</span>
+          <span class="etapa">Esa noche</span>
           <h3>Lo consultas con la almohada</h3>
           <p>Te vas a casa con tu mapa de trabajo a medio llenar. Muchas de las mejores preguntas aparecen aquí.</p>
         </div>
 
         <div class="parada grande">
-          <span class="cuando-p">Domingo 7 de marzo</span>
+          <span class="etapa">Domingo 7 de marzo</span>
           <h3>Día 2: Avanza</h3>
           <p>El segundo día pasa de entender a actuar. Hablamos del crédito de negocio, de cómo se organiza una empresa frente al banco, de las distintas formas de llegar al capital y de casos reales. Cerramos armando tu plan.</p>
           <ul class="temas">
@@ -323,11 +371,11 @@ footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
             <li>Casos reales</li>
             <li>Tu plan de acción</li>
           </ul>
-          <figure class="dia-foto"><img src="assets/web/puente-brooklyn.jpg" alt="El puente de Brooklyn y el Bajo Manhattan al atardecer" loading="lazy"></figure>
+          <figure class="dia-foto"><img src="https://images.unsplash.com/photo-1496588152823-86ff7695e68f?auto=format&fit=crop&w=2560&q=80" alt="Vista panorámica del puente de Brooklyn" loading="lazy"></figure>
         </div>
 
-        <div class="parada chica">
-          <span class="cuando-p">El lunes</span>
+        <div class="parada chica final">
+          <span class="etapa">El lunes</span>
           <h3>Empiezas</h3>
           <p>Con un calendario de 30, 60 y 90 días, y con gente que sigue el camino contigo.</p>
         </div>
@@ -339,7 +387,7 @@ footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
     <div class="envoltura">
       <div>
         <h2>Lo que te llevas a casa</h2>
-        <p style="margin-top:1.5rem;color:var(--tinta)">Nada de esto sirve si se queda en el salón. Por eso cada asistente sale con material para seguir trabajando.</p>
+        <p class="lead">Nada de esto sirve si se queda en el salón. Por eso cada asistente sale con material para seguir trabajando.</p>
       </div>
       <dl>
         <div><dt>Workbook y mapa de trabajo</dt><dd>Lo vas llenando durante los dos días con tu propia información.</dd></div>
@@ -351,33 +399,20 @@ footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
     </div>
   </section>
 
-  <section class="voces" id="voces">
+  <section class="voces" id="voces" aria-roledescription="carrusel" aria-label="Speakers">
     <div class="envoltura">
-      <h2>Quién te acompaña</h2>
-      <p class="lead">Gente que ha estado del otro lado del escritorio del banco, y que habla claro.</p>
-      <div class="voces-grid">
-        <article class="voz">
-          <img src="assets/web/gabriel-solis.jpg" alt="Gabriel Solís Moya" loading="lazy">
-          <div class="info">
-            <h3>Gabriel Solís Moya</h3>
-            <p>Fundador y CEO de Rehobot Strategy Corp. Administrador de empresas, especialista en sistemas de calidad y en crédito.</p>
-          </div>
-        </article>
-        <article class="voz sorpresa">
-          <div class="silueta" aria-hidden="true">?</div>
-          <div class="info">
-            <h3>Invitado sorpresa</h3>
-            <p>Lo presentamos muy pronto en nuestras redes.</p>
-          </div>
-        </article>
-        <article class="voz sorpresa">
-          <div class="silueta" aria-hidden="true">?</div>
-          <div class="info">
-            <h3>Invitado sorpresa</h3>
-            <p>Una pista: sabe mucho de crédito de negocio y de bancos.</p>
-          </div>
-        </article>
+      <div class="voces-cabecera">
+        <div>
+          <h2>Quién te acompaña</h2>
+          <p>Gente que ha estado del otro lado del escritorio del banco, y que habla claro.</p>
+        </div>
+        <div class="flechas">
+          <button class="flecha" id="anterior" type="button" aria-label="Speaker anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button class="flecha" id="siguiente" type="button" aria-label="Siguiente speaker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
       </div>
+      <div class="escenario" id="escenario"></div>
+      <div class="puntos" id="puntos" role="group" aria-label="Elegir speaker"></div>
     </div>
   </section>
 
@@ -387,7 +422,12 @@ footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
   -->
 
   <section class="lugar" id="lugar">
-    <img src="assets/web/nyc-noche.jpg" alt="Manhattan de noche desde lo alto" loading="lazy">
+    <figure>
+      <img class="foto" src="https://images.unsplash.com/photo-1750730677501-ad8b286ac97e?auto=format&fit=crop&w=2560&q=80"
+           srcset="https://images.unsplash.com/photo-1750730677501-ad8b286ac97e?auto=format&fit=crop&w=1280&q=80 1280w,
+                   https://images.unsplash.com/photo-1750730677501-ad8b286ac97e?auto=format&fit=crop&w=2560&q=80 2560w"
+           sizes="(max-width:780px) 100vw, 55vw" alt="La Unisphere en Flushing Meadows, Queens, a pasos del New York Hall of Science" loading="lazy">
+    </figure>
     <div class="texto">
       <h2>El lugar</h2>
       <address>
@@ -443,7 +483,7 @@ footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
     <div class="envoltura">
       <div>
         <h2>Preguntas que nos hacen</h2>
-        <p style="margin-top:1.5rem;color:var(--tinta)">¿No ves la tuya? Escríbenos a <a href="mailto:ndiaz@rehobott.com">ndiaz@rehobott.com</a> o llámanos al <a href="tel:+16314010564">(631) 401-0564</a>.</p>
+        <p class="lead">¿No ves la tuya? Escríbenos a <a href="mailto:ndiaz@rehobott.com">ndiaz@rehobott.com</a> o llámanos al <a href="tel:+16314010564">(631) 401-0564</a>.</p>
       </div>
       <div>
         <details><summary>¿Necesito tener buen crédito para ir?</summary><p>No. El evento está pensado justamente para quien quiere entender su crédito y trabajarlo, esté como esté.</p></details>
@@ -458,7 +498,11 @@ footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
   </section>
 
   <section class="cierre">
-    <img src="assets/web/amanecer-empire.jpg" alt="" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1767342007060-694d6a7db73f?auto=format&fit=crop&w=3840&q=80"
+         srcset="https://images.unsplash.com/photo-1767342007060-694d6a7db73f?auto=format&fit=crop&w=1280&q=80 1280w,
+                 https://images.unsplash.com/photo-1767342007060-694d6a7db73f?auto=format&fit=crop&w=2560&q=80 2560w,
+                 https://images.unsplash.com/photo-1767342007060-694d6a7db73f?auto=format&fit=crop&w=3840&q=80 3840w"
+         sizes="100vw" alt="" aria-hidden="true" loading="lazy">
     <div class="envoltura">
       <h2>¿Dónde quieres estar dentro de doce meses?</h2>
       <p>La respuesta empieza el 6 de marzo.</p>
@@ -472,9 +516,9 @@ footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
   <div class="envoltura">
     <div class="pie-arriba">
       <div class="marcas">
-        <img src="assets/web/logo-dac-claro.png" alt="Despierta al Capital" width="190" style="width:190px">
-        <img src="assets/web/logo-capital-path.png" alt="Capital Path" width="190" style="width:190px">
-        <img src="assets/web/logo-rehobot.png" alt="Rehobot" width="120" style="width:120px">
+        <img src="assets/web/logo-dac-oscuro.png" alt="Despierta al Capital" style="width:170px">
+        <img src="assets/web/logo-capital-path-negativo.png" alt="Capital Path, From Credit to Capital" style="width:200px">
+        <img class="rehobot" src="assets/web/logo-rehobot.png" alt="Rehobot" style="width:120px">
       </div>
       <div class="contacto">
         <strong>Hablemos</strong>
@@ -485,6 +529,7 @@ footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
       </div>
     </div>
     <p class="aviso">Despierta al Capital es una experiencia de desarrollo empresarial y acceso al capital. No ofrecemos asesoría legal, financiera ni de inversión, y no garantizamos cambios en tu puntaje de crédito ni la aprobación de financiamiento. Los resultados dependen de la situación y las decisiones de cada persona.</p>
+    <p class="creditos">Fotos de Nueva York en <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>: Mike Chavarri, Zac Ong, Matt Nelson, Luca Bravo, Yarenci Hdz y Zoshua Colah.</p>
     <div class="pie-abajo">
       <span>© 2027 Rehobot Strategy Corp.</span>
       <span>Despierta al Capital, Business Experience 2027</span>
@@ -495,9 +540,84 @@ footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
-// Pega aquí los Payment Links de Stripe cuando estén listos.
-const enlacesPago = { general: '', vip: '' };
+/* ===== Speakers =====
+   Para agregar uno nuevo, añade un objeto a esta lista.
+   - foto: PNG sin fondo (recortado) en assets/web/
+   - Si todavía es sorpresa, deja sorpresa: true y sin foto. */
+const speakers = [
+  {
+    nombre: 'Gabriel Solís Moya',
+    rol: 'Fundador y CEO de Rehobot Strategy Corp.',
+    bio: 'Administrador de empresas, especialista en sistemas de calidad y en crédito. Es la voz detrás de Capital Path.',
+    foto: 'assets/web/gabriel-flotando.png'
+  },
+  { nombre: 'Invitado sorpresa', rol: 'Se anuncia muy pronto', bio: 'Lo presentamos en nuestras redes en las próximas semanas.', sorpresa: true },
+  { nombre: 'Invitado sorpresa', rol: 'Se anuncia muy pronto', bio: 'Una pista: sabe mucho de crédito de negocio y de bancos.', sorpresa: true }
+];
+const inicial = 0; // Gabriel queda en el centro al cargar
 
+const escenario = document.getElementById('escenario');
+const puntos = document.getElementById('puntos');
+const btnAnt = document.getElementById('anterior');
+const btnSig = document.getElementById('siguiente');
+let actual = inicial;
+
+const silueta = `<svg viewBox="0 0 120 200" aria-hidden="true"><circle cx="60" cy="42" r="30" fill="#2A1E1F"/><path d="M8 200c0-58 22-96 52-96s52 38 52 96z" fill="#2A1E1F"/></svg><span>?</span>`;
+
+speakers.forEach((s, i) => {
+  const t = document.createElement('article');
+  t.className = 'tarjeta';
+  t.setAttribute('aria-roledescription', 'diapositiva');
+  t.setAttribute('aria-label', `${i + 1} de ${speakers.length}: ${s.nombre}`);
+  t.innerHTML = `
+    <div class="figura">${s.sorpresa || !s.foto
+      ? `<div class="silueta">${silueta}</div>`
+      : `<img src="${s.foto}" alt="${s.nombre}" draggable="false">`}</div>
+    <div class="nombre">
+      <h3>${s.nombre}</h3>
+      <p class="rol">${s.rol}</p>
+      <p class="bio">${s.bio}</p>
+    </div>`;
+  t.addEventListener('click', () => { if (i !== actual) ir(i); });
+  escenario.appendChild(t);
+
+  const p = document.createElement('button');
+  p.className = 'punto';
+  p.type = 'button';
+  p.setAttribute('aria-label', `Ver a ${s.nombre} (${i + 1} de ${speakers.length})`);
+  p.addEventListener('click', () => ir(i));
+  puntos.appendChild(p);
+});
+
+function ir(i) {
+  actual = Math.max(0, Math.min(speakers.length - 1, i));
+  [...escenario.children].forEach((t, k) => {
+    const d = k - actual;
+    t.dataset.pos = d === 0 ? 'centro' : d === -1 ? 'izq' : d === 1 ? 'der' : d < 0 ? 'fuera-izq' : 'fuera-der';
+    t.setAttribute('aria-hidden', d === 0 ? 'false' : 'true');
+  });
+  [...puntos.children].forEach((p, k) => p.setAttribute('aria-current', k === actual ? 'true' : 'false'));
+  btnAnt.disabled = actual === 0;
+  btnSig.disabled = actual === speakers.length - 1;
+}
+btnAnt.addEventListener('click', () => ir(actual - 1));
+btnSig.addEventListener('click', () => ir(actual + 1));
+document.getElementById('voces').addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight') ir(actual + 1);
+  if (e.key === 'ArrowLeft') ir(actual - 1);
+});
+let x0 = null;
+escenario.addEventListener('pointerdown', e => { x0 = e.clientX; });
+escenario.addEventListener('pointerup', e => {
+  if (x0 === null) return;
+  const dx = e.clientX - x0; x0 = null;
+  if (Math.abs(dx) > 50) ir(actual + (dx < 0 ? 1 : -1));
+});
+ir(inicial);
+
+/* ===== Pagos =====
+   Pega aquí los Payment Links de Stripe cuando estén listos. */
+const enlacesPago = { general: '', vip: '' };
 const toast = document.getElementById('toast');
 let temporizador;
 document.querySelectorAll('.pagar').forEach(boton => {
@@ -513,6 +633,7 @@ document.querySelectorAll('.pagar').forEach(boton => {
   });
 });
 
+/* Barra superior sólida al bajar */
 const barra = document.getElementById('barra');
 const alDesplazar = () => barra.classList.toggle('solida', window.scrollY > 40);
 window.addEventListener('scroll', alDesplazar, { passive: true });
