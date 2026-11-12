@@ -1,24 +1,522 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Despierta al Capital 2026 - Sponsorship</title>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Despierta al Capital 2027, 6 y 7 de marzo en Queens, NY</title>
+<meta name="description" content="Dos días para entender tu crédito, ordenar tu negocio y trazar tu camino hacia el capital. Sábado 6 y domingo 7 de marzo de 2027 en Queens, Nueva York.">
+<meta property="og:title" content="Despierta al Capital 2027">
+<meta property="og:description" content="Dos días para pasar del crédito al capital. 6 y 7 de marzo de 2027, Queens, NY.">
+<meta property="og:image" content="assets/web/amanecer-empire.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#111;font-family:Arial,sans-serif}.page{position:relative;max-width:768px;margin:0 auto;background:#fff}.page img{display:block;width:100%;height:auto}.hotspot{position:absolute;display:block;cursor:pointer;border-radius:12px;transition:.2s;background:rgba(255,255,255,0)}.hotspot:hover,.hotspot:focus{background:rgba(255,255,255,.12);outline:3px solid rgba(255,255,255,.75);outline-offset:-3px}.plans .hotspot:hover{background:rgba(255,255,255,.12);outline-color:#fff}.note{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:20;background:#111;color:#fff;padding:10px 16px;border-radius:999px;font-size:13px;box-shadow:0 4px 18px #0007;opacity:0;pointer-events:none;transition:.25s}.note.show{opacity:1}
-/* Page 2 CTA */ #cta-path{left:9.8%;top:79.1%;width:37.3%;height:5.5%}
-/* Page 6 plan price hotspots */ #bronze{left:5.7%;top:83.8%;width:20.5%;height:13.5%}#silver{left:28.9%;top:83.8%;width:20.5%;height:13.5%}#gold{left:52.1%;top:83.8%;width:20.5%;height:13.5%}#platinum{left:75.2%;top:83.8%;width:20.5%;height:13.5%}
-/* Contact page */ #phone{left:7%;top:75%;width:35%;height:7%}#email{left:44%;top:75%;width:48%;height:7%}#website{left:7%;top:82%;width:35%;height:10%}#location{left:44%;top:82%;width:49%;height:10%}
-</style></head><body>
-<div class="page"><img src="assets/sponsor_page-1.png" alt="Despierta al Capital 2026 cover"></div>
-<div class="page"><img src="assets/sponsor_page-2.png" alt="Sponsorship proposal"><a id="cta-path" class="hotspot" href="#packages" aria-label="Be part of the path - view sponsorship packages"></a></div>
-<div class="page"><img src="assets/sponsor_page-3.png" alt="About the event"></div>
-<div class="page"><img src="assets/sponsor_page-4.png" alt="Meet the speakers"></div>
-<div class="page"><img src="assets/sponsor_page-5.png" alt="Why partner with us"></div>
-<div class="page plans" id="packages"><img src="assets/sponsor_page-6.png" alt="Sponsorship packages"><a id="bronze" class="hotspot pay" href="#" data-plan="Bronze - $1,500" aria-label="Choose Bronze Package for $1,500"></a><a id="silver" class="hotspot pay" href="#" data-plan="Silver - $2,500" aria-label="Choose Silver Package for $2,500"></a><a id="gold" class="hotspot pay" href="#" data-plan="Gold - $5,000" aria-label="Choose Gold Package for $5,000"></a><a id="platinum" class="hotspot pay" href="#" data-plan="Platinum - $15,000" aria-label="Choose Platinum Package for $15,000"></a></div>
-<div class="page"><img src="assets/sponsor_page-7.png" alt="The experience"></div>
-<div class="page"><img src="assets/sponsor_page-8.png" alt="Our contact"><a id="phone" class="hotspot" href="tel:+16314010564" aria-label="Call Capital Path"></a><a id="email" class="hotspot" href="mailto:ndiaz@rehobott.com" aria-label="Email Capital Path"></a><a id="website" class="hotspot" href="https://www.rehobott.com/capitalpath" target="_blank" rel="noopener" aria-label="Visit Capital Path website"></a><a id="location" class="hotspot" href="https://www.google.com/maps/search/?api=1&query=New+York+Hall+of+Science" target="_blank" rel="noopener" aria-label="Open New York Hall of Science in maps"></a></div>
-<div class="page"><img src="assets/sponsor_page-9.png" alt="Despierta al Capital, Capital Path and Rehobot"></div>
-<div id="note" class="note">Stripe link pending</div>
+:root{
+  --carbon:#1A1614;
+  --carbon-2:#26201D;
+  --rojo:#B3121F;
+  --rojo-vivo:#E01E26;
+  --ambar:#F2A93B;
+  --piedra:#EFECE8;
+  --blanco:#FFFFFF;
+  --tinta:#5A524D;
+  --display:"Archivo","Arial Narrow",sans-serif;
+  --texto:"Source Serif 4",Georgia,serif;
+  --ancho:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--blanco);color:var(--carbon);font-family:var(--texto);font-size:1.125rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ambar);outline-offset:3px}
+.envoltura{width:min(var(--ancho),100% - 3rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-stretch:68%;font-weight:850;line-height:.95;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(2.6rem,6vw,4.6rem)}
+h3{font-size:1.9rem;font-stretch:75%;font-weight:800;line-height:1.05}
+p{margin:0 0 1em;max-width:62ch}
+
+/* Botones */
+.boton{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--display);font-stretch:90%;font-weight:700;font-size:1.05rem;text-decoration:none;padding:1rem 1.6rem;border-radius:999px;background:var(--rojo);color:var(--blanco);border:2px solid var(--rojo);cursor:pointer;transition:background .2s,border-color .2s}
+.boton:hover{background:var(--rojo-vivo);border-color:var(--rojo-vivo)}
+.boton.claro{background:transparent;border-color:currentColor;color:inherit}
+.boton.claro:hover{background:rgba(255,255,255,.08)}
+
+/* Barra */
+.barra{position:fixed;inset:0 0 auto;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 1.5rem;color:var(--blanco);transition:background .3s}
+.barra.solida{background:rgba(26,22,20,.94);backdrop-filter:blur(8px)}
+.barra img{height:34px;width:auto;mix-blend-mode:screen;transition:opacity .3s}
+.barra:not(.solida) img{opacity:0}
+.barra nav{display:flex;gap:1.6rem;font-family:var(--display);font-stretch:90%;font-weight:600;font-size:.98rem}
+.barra nav a{text-decoration:none;opacity:.85}
+.barra nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+.barra .boton{padding:.6rem 1.1rem;font-size:.95rem}
+@media (max-width:860px){.barra nav{display:none}}
+
+/* Portada */
+.portada{display:grid;grid-template-columns:1.05fr .95fr;min-height:100svh;background:var(--carbon);color:var(--blanco)}
+.portada-texto{display:flex;flex-direction:column;justify-content:center;padding:7.5rem clamp(1.5rem,5vw,5rem) 4rem}
+.portada-texto .logo{width:min(440px,90%);mix-blend-mode:screen;margin-bottom:2.2rem}
+.portada h1{font-size:clamp(3rem,6.4vw,5.6rem);margin-bottom:1.6rem}
+.portada .bajada{font-size:1.25rem;color:#E7E1DC;max-width:34ch}
+.cuando{display:flex;flex-wrap:wrap;gap:.4rem 2.2rem;margin:1.8rem 0 2.4rem;font-family:var(--display);font-stretch:85%;font-size:1.15rem}
+.cuando strong{display:block;font-weight:800;font-size:1.5rem;color:var(--blanco)}
+.cuando span{color:#BDB4AD}
+.acciones{display:flex;flex-wrap:wrap;gap:.8rem}
+.portada-foto{position:relative;overflow:hidden}
+.portada-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.portada-foto figcaption{position:absolute;left:1.2rem;bottom:1rem;font-size:.85rem;color:rgba(255,255,255,.8);font-style:italic}
+@media (max-width:860px){
+  .portada{grid-template-columns:1fr}
+  .portada-foto{order:-1;height:46vh}
+  .portada-texto{padding-top:2.5rem}
+}
+
+/* Carta */
+.carta{padding:clamp(4.5rem,10vw,8rem) 0;background:var(--blanco)}
+.carta .envoltura{display:grid;grid-template-columns:280px 1fr;gap:clamp(2rem,6vw,6rem);align-items:start}
+.carta figure{margin:0;position:sticky;top:6rem}
+.carta figure img{border-radius:6px;filter:saturate(.9)}
+.carta figcaption{font-family:var(--display);font-stretch:85%;font-size:1rem;margin-top:.8rem;color:var(--tinta)}
+.carta figcaption b{display:block;color:var(--carbon);font-size:1.15rem}
+.carta h2{margin-bottom:2rem;max-width:14ch}
+.carta .cuerpo p{font-size:1.2rem}
+.firma{font-family:var(--texto);font-style:italic;font-size:1.35rem;margin-top:1.5rem}
+@media (max-width:760px){.carta .envoltura{grid-template-columns:1fr}.carta figure{position:static;max-width:220px}}
+
+/* Para ti */
+.para-ti{background:var(--piedra);padding:clamp(4.5rem,9vw,7rem) 0}
+.para-ti .envoltura{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem)}
+.para-ti h2{max-width:11ch}
+.para-ti ul{list-style:none;margin:0;padding:0}
+.para-ti li{padding:1.1rem 0;border-bottom:1px solid #D6D0CA;font-size:1.15rem}
+.para-ti li:first-child{padding-top:0}
+.situaciones{margin-top:2rem;color:var(--tinta);font-size:1rem}
+@media (max-width:760px){.para-ti .envoltura{grid-template-columns:1fr}}
+
+/* Carretera: el recorrido de los dos días */
+.recorrido{background:var(--carbon);color:var(--blanco);padding:clamp(4.5rem,10vw,8rem) 0 clamp(3rem,6vw,5rem)}
+.recorrido .intro{max-width:40rem;margin-bottom:4rem}
+.recorrido .intro h2{margin-bottom:1.5rem}
+.para-ti h2,.llevas h2,.preguntas h2{margin-bottom:.5rem}
+.recorrido .intro p{color:#D9D1CB;font-size:1.2rem}
+.via{position:relative;padding-left:120px}
+.via::before{content:"";position:absolute;left:28px;top:0;bottom:0;width:64px;background:var(--carbon-2);border-left:3px solid #4A403B;border-right:3px solid #4A403B}
+.via::after{content:"";position:absolute;left:58px;top:0;bottom:0;width:4px;background:repeating-linear-gradient(var(--ambar) 0 26px,transparent 26px 50px);transform-origin:top;animation:trazar 2.2s ease-out both;animation-timeline:view();animation-range:entry 0% cover 60%}
+@keyframes trazar{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@media (prefers-reduced-motion:reduce){.via::after{animation:none}}
+.parada{position:relative;padding:0 0 4.5rem}
+.parada::before{content:"";position:absolute;left:-104px;top:.35rem;width:32px;height:32px;border-radius:50%;background:var(--carbon);border:4px solid var(--ambar)}
+.parada.grande::before{background:var(--rojo);border-color:var(--blanco);width:40px;height:40px;left:-108px}
+.parada .cuando-p{font-family:var(--display);font-stretch:85%;font-weight:600;color:var(--ambar);font-size:1.05rem;margin-bottom:.4rem;display:block}
+.parada h3{font-size:clamp(2.2rem,4.6vw,3.4rem);font-stretch:68%;font-weight:850;margin-bottom:1rem}
+.parada p{color:#D9D1CB}
+.parada .temas{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0 0;padding:0;list-style:none}
+.parada .temas li{font-family:var(--display);font-stretch:90%;font-size:.95rem;padding:.35rem .85rem;border:1px solid #5B504A;border-radius:999px;color:#EDE6E0}
+.parada.chica h3{font-size:1.8rem;font-stretch:75%}
+.dia-foto{margin:2rem 0 0;max-width:560px}
+.dia-foto img{border-radius:6px;aspect-ratio:16/9;object-fit:cover;width:100%}
+@media (max-width:600px){
+  .via{padding-left:76px}
+  .via::before{left:10px;width:44px}
+  .via::after{left:30px}
+  .parada::before{left:-78px}
+  .parada.grande::before{left:-82px}
+}
+
+/* Te llevas */
+.llevas{padding:clamp(4.5rem,9vw,7rem) 0}
+.llevas .envoltura{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,6rem);align-items:start}
+.llevas dl{margin:0;display:grid;gap:1.8rem}
+.llevas dt{font-family:var(--display);font-stretch:80%;font-weight:800;font-size:1.45rem}
+.llevas dd{margin:.2rem 0 0;color:var(--tinta)}
+@media (max-width:760px){.llevas .envoltura{grid-template-columns:1fr}}
+
+/* Speakers */
+.voces{background:var(--piedra);padding:clamp(4.5rem,9vw,7rem) 0}
+.voces h2{margin-bottom:1rem}
+.voces .lead{color:var(--tinta);margin-bottom:3rem}
+.voces-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:1.5rem}
+.voz{background:var(--blanco);border-radius:6px;overflow:hidden}
+.voz img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.voz .info{padding:1.3rem 1.4rem 1.6rem}
+.voz h3{font-size:1.7rem}
+.voz p{font-size:1rem;color:var(--tinta);margin:.5rem 0 0}
+.sorpresa{display:flex;flex-direction:column;justify-content:flex-end;background:var(--carbon);color:var(--blanco);min-height:100%}
+.sorpresa .silueta{flex:1;display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:9rem;color:#3A312D;line-height:1;min-height:220px}
+.sorpresa p{color:#C9C0B9}
+@media (max-width:860px){.voces-grid{grid-template-columns:1fr 1fr}.voces-grid .voz:first-child{grid-column:1/-1}}
+@media (max-width:520px){.voces-grid{grid-template-columns:1fr}}
+
+/* Lugar */
+.lugar{display:grid;grid-template-columns:1fr 1fr;background:var(--rojo);color:var(--blanco)}
+.lugar img{width:100%;height:100%;object-fit:cover;min-height:340px}
+.lugar .texto{padding:clamp(3rem,7vw,6rem) clamp(1.5rem,5vw,5rem)}
+.lugar address{font-style:normal;font-size:1.2rem;margin:1.5rem 0}
+.lugar h3{font-size:1.3rem;font-stretch:85%;margin:1.6rem 0 .3rem}
+.lugar p{color:#FBE3E4}
+.lugar .boton.claro{margin-top:1rem}
+@media (max-width:760px){.lugar{grid-template-columns:1fr}}
+
+/* Entradas */
+.entradas{padding:clamp(4.5rem,9vw,7rem) 0}
+.entradas .lead{color:var(--tinta);margin:1rem 0 3rem}
+.opciones{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:stretch}
+.opcion{border:2px solid var(--carbon);border-radius:10px;padding:2.2rem;display:flex;flex-direction:column}
+.opcion.vip{background:var(--carbon);color:var(--blanco);border-color:var(--carbon)}
+.opcion h3{font-size:2.2rem}
+.precio{font-family:var(--display);font-stretch:70%;font-weight:900;font-size:4.2rem;line-height:1;margin:1.2rem 0 .3rem}
+.precio-nota{font-size:.98rem;color:var(--tinta);margin-bottom:1.6rem}
+.vip .precio-nota{color:#C9C0B9}
+.opcion ul{margin:0 0 2rem;padding-left:1.2rem;flex:1}
+.opcion li{margin-bottom:.55rem}
+.opcion .boton{align-self:flex-start}
+.vip .boton{background:var(--blanco);color:var(--carbon);border-color:var(--blanco)}
+.vip .boton:hover{background:var(--ambar);border-color:var(--ambar)}
+@media (max-width:760px){.opciones{grid-template-columns:1fr}}
+
+/* Preguntas */
+.preguntas{background:var(--piedra);padding:clamp(4.5rem,9vw,7rem) 0}
+.preguntas .envoltura{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,6rem)}
+details{border-bottom:1px solid #D6D0CA}
+summary{cursor:pointer;list-style:none;padding:1.2rem 2.5rem 1.2rem 0;position:relative;font-family:var(--display);font-stretch:85%;font-weight:700;font-size:1.3rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:.2rem;top:.9rem;font-size:1.8rem;font-weight:400;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--tinta);padding-bottom:.6rem}
+@media (max-width:760px){.preguntas .envoltura{grid-template-columns:1fr}}
+
+/* Cierre */
+.cierre{position:relative;color:var(--blanco);padding:clamp(6rem,14vw,10rem) 0;overflow:hidden;background:var(--carbon)}
+.cierre img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
+.cierre .envoltura{position:relative}
+.cierre h2{font-size:clamp(2.8rem,7vw,5.6rem);max-width:15ch;margin-bottom:1.5rem}
+.cierre p{font-size:1.25rem;color:#E7E1DC}
+
+/* Pie */
+footer{background:var(--blanco);padding:4rem 0 2.5rem;font-size:.98rem}
+.pie-arriba{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;align-items:flex-start;padding-bottom:2.5rem;border-bottom:1px solid #DDD7D1}
+.marcas{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+.marcas img{mix-blend-mode:multiply}
+.contacto{display:grid;gap:.3rem}
+.contacto a{text-decoration:none}
+.contacto a:hover{text-decoration:underline}
+.aviso{color:var(--tinta);font-size:.88rem;margin-top:2rem;max-width:80ch}
+.pie-abajo{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;margin-top:1.5rem;color:var(--tinta);font-size:.9rem}
+
+/* Aviso de pago */
+.toast{position:fixed;left:50%;bottom:1.2rem;transform:translate(-50%,150%);z-index:40;max-width:min(520px,92vw);background:var(--carbon);color:var(--blanco);padding:1rem 1.3rem;border-radius:10px;font-size:1rem;box-shadow:0 10px 30px rgba(0,0,0,.3);transition:transform .3s}
+.toast.visible{transform:translate(-50%,0)}
+.toast a{color:var(--ambar)}
+</style>
+</head>
+<body>
+
+<header class="barra" id="barra">
+  <a href="#inicio" aria-label="Despierta al Capital, inicio"><img src="assets/web/logo-dac-oscuro.png" alt="Despierta al Capital"></a>
+  <nav aria-label="Secciones">
+    <a href="#carta">El porqué</a>
+    <a href="#recorrido">Los dos días</a>
+    <a href="#voces">Speakers</a>
+    <a href="#lugar">Lugar</a>
+    <a href="#preguntas">Preguntas</a>
+  </nav>
+  <a class="boton" href="#entradas">Reservar entrada</a>
+</header>
+
+<main id="inicio">
+
+  <section class="portada">
+    <div class="portada-texto">
+      <img class="logo" src="assets/web/logo-dac-oscuro.png" alt="Despierta al Capital, Business Experience 2027">
+      <h1>Tu crédito cuenta una historia. Ven a escribir el siguiente capítulo.</h1>
+      <p class="bajada">Dos días en Nueva York para entender dónde estás, ordenar lo que tienes y salir con un plan para llegar al capital.</p>
+      <div class="cuando">
+        <div><strong>6 y 7 de marzo, 2027</strong><span>Sábado y domingo</span></div>
+        <div><strong>Queens, Nueva York</strong><span>New York Hall of Science</span></div>
+      </div>
+      <div class="acciones">
+        <a class="boton" href="#entradas">Reservar mi entrada</a>
+        <a class="boton claro" href="#recorrido">Ver los dos días</a>
+      </div>
+    </div>
+    <figure class="portada-foto" style="margin:0">
+      <img src="assets/web/amanecer-empire.jpg" alt="El Empire State al amanecer, con el cielo encendido en rojo sobre Manhattan">
+    </figure>
+  </section>
+
+  <section class="carta" id="carta">
+    <div class="envoltura">
+      <figure>
+        <img src="assets/web/gabriel-solis.jpg" alt="Gabriel Solís Moya" width="333" height="323">
+        <figcaption><b>Gabriel Solís Moya</b>Fundador y CEO de Rehobot Strategy Corp.</figcaption>
+      </figure>
+      <div class="cuerpo">
+        <h2>Por qué hacemos este evento</h2>
+        <p>Casi todas las personas que se sientan frente a mí traen la misma pregunta: ¿por qué el banco me dice que no?</p>
+        <p>A veces es una cuenta en colección que nadie les explicó. A veces es un negocio que factura bien pero que, en papel, no existe. Y casi siempre es la sensación de estar haciendo todo bien y aun así no avanzar.</p>
+        <p>Despierta al Capital nació para esa conversación. No es una conferencia donde te sientas a escuchar y te vas. Son dos días con tu reporte en la mano, entendiendo qué dice de ti, qué puedes mover primero y cómo se ve un negocio que está listo para pedir capital.</p>
+        <p>No te voy a prometer un número ni una aprobación. Te prometo claridad, y un plan que puedas seguir el lunes.</p>
+        <p class="firma">Nos vemos en Queens,<br>Gabriel</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="para-ti">
+    <div class="envoltura">
+      <div>
+        <h2>Esto es para ti si…</h2>
+        <p class="situaciones">No importa cómo esté tu crédito hoy. Una bancarrota, un foreclosure, préstamos estudiantiles atrasados, deudas médicas en colección o cuentas que ni siquiera son tuyas: todo eso tiene un orden para trabajarse.</p>
+      </div>
+      <ul>
+        <li>Revisaste tu score y no sabes qué hacer con ese número.</li>
+        <li>Tienes un negocio, o la idea de uno, y quieres que los bancos lo tomen en serio.</li>
+        <li>Te negaron un préstamo y nadie te explicó por qué.</li>
+        <li>Quieres comprar, invertir o crecer, pero sin dar pasos a ciegas.</li>
+        <li>Estás cansado de los consejos sueltos de internet y quieres un orden.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="recorrido" id="recorrido">
+    <div class="envoltura">
+      <div class="intro">
+        <h2>Dos días, un solo camino</h2>
+        <p>Lo pensamos como una carretera. Entras con lo que tienes, y en cada tramo vas dejando algo atrás y sumando algo nuevo.</p>
+      </div>
+
+      <div class="via">
+        <div class="parada chica">
+          <span class="cuando-p">Antes de llegar</span>
+          <h3>Trae tu reporte</h3>
+          <p>Te pediremos tener a mano tu reporte de crédito. Vamos a trabajar con tu situación real, no con ejemplos de libro.</p>
+        </div>
+
+        <div class="parada grande">
+          <span class="cuando-p">Sábado 6 de marzo</span>
+          <h3>Día 1: Despierta</h3>
+          <p>El primer día es para ver con claridad. Leemos el reporte juntos, entendemos qué pesa y qué no, y decidimos qué cuentas atender primero. También miramos tu estructura personal y la de tu negocio, porque una afecta a la otra más de lo que parece.</p>
+          <ul class="temas">
+            <li>Lectura guiada del reporte</li>
+            <li>Prioridades de cuentas</li>
+            <li>Estructura personal y de negocio</li>
+            <li>Conexiones con la industria</li>
+          </ul>
+          <figure class="dia-foto"><img src="assets/web/calle-nyc.jpg" alt="Una avenida de Manhattan de día, con árboles a ambos lados" loading="lazy"></figure>
+        </div>
+
+        <div class="parada chica">
+          <span class="cuando-p">Esa noche</span>
+          <h3>Lo consultas con la almohada</h3>
+          <p>Te vas a casa con tu mapa de trabajo a medio llenar. Muchas de las mejores preguntas aparecen aquí.</p>
+        </div>
+
+        <div class="parada grande">
+          <span class="cuando-p">Domingo 7 de marzo</span>
+          <h3>Día 2: Avanza</h3>
+          <p>El segundo día pasa de entender a actuar. Hablamos del crédito de negocio, de cómo se organiza una empresa frente al banco, de las distintas formas de llegar al capital y de casos reales. Cerramos armando tu plan.</p>
+          <ul class="temas">
+            <li>Crédito de negocio</li>
+            <li>Relación con la banca</li>
+            <li>Opciones de capital</li>
+            <li>Casos reales</li>
+            <li>Tu plan de acción</li>
+          </ul>
+          <figure class="dia-foto"><img src="assets/web/puente-brooklyn.jpg" alt="El puente de Brooklyn y el Bajo Manhattan al atardecer" loading="lazy"></figure>
+        </div>
+
+        <div class="parada chica">
+          <span class="cuando-p">El lunes</span>
+          <h3>Empiezas</h3>
+          <p>Con un calendario de 30, 60 y 90 días, y con gente que sigue el camino contigo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="llevas">
+    <div class="envoltura">
+      <div>
+        <h2>Lo que te llevas a casa</h2>
+        <p style="margin-top:1.5rem;color:var(--tinta)">Nada de esto sirve si se queda en el salón. Por eso cada asistente sale con material para seguir trabajando.</p>
+      </div>
+      <dl>
+        <div><dt>Workbook y mapa de trabajo</dt><dd>Lo vas llenando durante los dos días con tu propia información.</dd></div>
+        <div><dt>Modelos de cartas</dt><dd>Para comunicarte con burós y acreedores sin empezar de cero.</dd></div>
+        <div><dt>Calendario de 30, 60 y 90 días</dt><dd>Qué hacer, en qué orden y cuándo revisar.</dd></div>
+        <div><dt>Comunidad y una sesión de seguimiento</dt><dd>Una reunión en grupo después del evento para ver cómo vas.</dd></div>
+        <div><dt>Grabaciones y material digital</dt><dd>Para repasar lo que se te escapó.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="voces" id="voces">
+    <div class="envoltura">
+      <h2>Quién te acompaña</h2>
+      <p class="lead">Gente que ha estado del otro lado del escritorio del banco, y que habla claro.</p>
+      <div class="voces-grid">
+        <article class="voz">
+          <img src="assets/web/gabriel-solis.jpg" alt="Gabriel Solís Moya" loading="lazy">
+          <div class="info">
+            <h3>Gabriel Solís Moya</h3>
+            <p>Fundador y CEO de Rehobot Strategy Corp. Administrador de empresas, especialista en sistemas de calidad y en crédito.</p>
+          </div>
+        </article>
+        <article class="voz sorpresa">
+          <div class="silueta" aria-hidden="true">?</div>
+          <div class="info">
+            <h3>Invitado sorpresa</h3>
+            <p>Lo presentamos muy pronto en nuestras redes.</p>
+          </div>
+        </article>
+        <article class="voz sorpresa">
+          <div class="silueta" aria-hidden="true">?</div>
+          <div class="info">
+            <h3>Invitado sorpresa</h3>
+            <p>Una pista: sabe mucho de crédito de negocio y de bancos.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    TESTIMONIOS: cuando el cliente envíe historias reales (nombre, foto o video y permiso de uso),
+    van aquí, entre "Quién te acompaña" y "El lugar". No publicar testimonios inventados.
+  -->
+
+  <section class="lugar" id="lugar">
+    <img src="assets/web/nyc-noche.jpg" alt="Manhattan de noche desde lo alto" loading="lazy">
+    <div class="texto">
+      <h2>El lugar</h2>
+      <address>
+        <strong>New York Hall of Science</strong><br>
+        47-01 111th St<br>
+        Queens, NY 11368
+      </address>
+      <h3>Cómo llegar</h3>
+      <p>En tren, toma la línea 7 hasta la estación 111 St. De ahí son unos minutos caminando.</p>
+      <h3>Horario</h3>
+      <p>Te lo confirmamos por correo junto con tu entrada.</p>
+      <a class="boton claro" href="https://www.google.com/maps/search/?api=1&query=New+York+Hall+of+Science+47-01+111th+St+Queens" target="_blank" rel="noopener">Abrir en Google Maps</a>
+    </div>
+  </section>
+
+  <section class="entradas" id="entradas">
+    <div class="envoltura">
+      <h2>Reserva tu lugar</h2>
+      <p class="lead">Las dos entradas incluyen ambos días completos y todo el material.</p>
+      <div class="opciones">
+        <article class="opcion">
+          <h3>General</h3>
+          <div class="precio">$449</div>
+          <p class="precio-nota">Precio de preventa. El precio regular es $497.</p>
+          <ul>
+            <li>Acceso a los dos días</li>
+            <li>Workbook y mapa de trabajo</li>
+            <li>Modelos de cartas</li>
+            <li>Calendario de 30, 60 y 90 días</li>
+            <li>Comunidad y sesión grupal de seguimiento</li>
+            <li>Grabaciones y material digital</li>
+          </ul>
+          <a class="boton pagar" href="#" data-entrada="general">Comprar entrada General</a>
+        </article>
+        <article class="opcion vip">
+          <h3>VIP</h3>
+          <div class="precio">$749</div>
+          <p class="precio-nota">Precio de preventa. El precio regular es $997.</p>
+          <ul>
+            <li>Todo lo que incluye la entrada General</li>
+            <li>Asientos preferenciales</li>
+            <li>Zona VIP</li>
+            <li>Tiempo de networking con los speakers y el equipo</li>
+            <li>Acceso prioritario a las mesas privadas del día 2</li>
+          </ul>
+          <a class="boton pagar" href="#" data-entrada="vip">Comprar entrada VIP</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="preguntas" id="preguntas">
+    <div class="envoltura">
+      <div>
+        <h2>Preguntas que nos hacen</h2>
+        <p style="margin-top:1.5rem;color:var(--tinta)">¿No ves la tuya? Escríbenos a <a href="mailto:ndiaz@rehobott.com">ndiaz@rehobott.com</a> o llámanos al <a href="tel:+16314010564">(631) 401-0564</a>.</p>
+      </div>
+      <div>
+        <details><summary>¿Necesito tener buen crédito para ir?</summary><p>No. El evento está pensado justamente para quien quiere entender su crédito y trabajarlo, esté como esté.</p></details>
+        <details><summary>¿Esto es un servicio de credit repair?</summary><p>No. Es una experiencia de dos días para que entiendas tu situación y salgas con un plan propio. Tú decides qué hacer con él.</p></details>
+        <details><summary>¿Me garantizan que suba mi score o que me aprueben un préstamo?</summary><p>No. Nadie honesto puede garantizar eso. Lo que sí te llevas es claridad sobre tu situación y un orden para actuar.</p></details>
+        <details><summary>¿Qué debo llevar?</summary><p>Tu reporte de crédito, o acceso a él desde el teléfono, algo para escribir y, si tienes negocio, la información básica de la empresa.</p></details>
+        <details><summary>¿Puedo ir solo a un día?</summary><p>Las entradas son para los dos días. El segundo día se apoya en lo que trabajamos el primero.</p></details>
+        <details><summary>¿Cuál es la diferencia entre General y VIP?</summary><p>El contenido es el mismo. La VIP suma asientos preferenciales, zona VIP, networking con los speakers y acceso prioritario a las mesas privadas del domingo.</p></details>
+        <details><summary>¿Cuál es la política de cancelación?</summary><p>La encuentras en los Términos y Condiciones. Si tienes un caso particular, escríbenos y lo vemos.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cierre">
+    <img src="assets/web/amanecer-empire.jpg" alt="" aria-hidden="true">
+    <div class="envoltura">
+      <h2>¿Dónde quieres estar dentro de doce meses?</h2>
+      <p>La respuesta empieza el 6 de marzo.</p>
+      <a class="boton" href="#entradas" style="margin-top:1rem">Reservar mi entrada</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="envoltura">
+    <div class="pie-arriba">
+      <div class="marcas">
+        <img src="assets/web/logo-dac-claro.png" alt="Despierta al Capital" width="190" style="width:190px">
+        <img src="assets/web/logo-capital-path.png" alt="Capital Path" width="190" style="width:190px">
+        <img src="assets/web/logo-rehobot.png" alt="Rehobot" width="120" style="width:120px">
+      </div>
+      <div class="contacto">
+        <strong>Hablemos</strong>
+        <a href="mailto:ndiaz@rehobott.com">ndiaz@rehobott.com</a>
+        <a href="tel:+16314010564">(631) 401-0564</a>
+        <a href="https://www.rehobott.com/capitalpath" target="_blank" rel="noopener">rehobott.com/capitalpath</a>
+        <a href="patrocinio.html">¿Quieres patrocinar el evento?</a>
+      </div>
+    </div>
+    <p class="aviso">Despierta al Capital es una experiencia de desarrollo empresarial y acceso al capital. No ofrecemos asesoría legal, financiera ni de inversión, y no garantizamos cambios en tu puntaje de crédito ni la aprobación de financiamiento. Los resultados dependen de la situación y las decisiones de cada persona.</p>
+    <div class="pie-abajo">
+      <span>© 2027 Rehobot Strategy Corp.</span>
+      <span>Despierta al Capital, Business Experience 2027</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 <script>
-// Paste the four Stripe Payment Links below when available.
-const stripeLinks={bronze:'',silver:'',gold:'',platinum:''};
-const note=document.getElementById('note');
-document.querySelectorAll('.pay').forEach(a=>a.addEventListener('click',e=>{const url=stripeLinks[a.id];if(url){a.href=url;a.target='_blank';return;}e.preventDefault();note.textContent=a.dataset.plan+' - Stripe link pending';note.classList.add('show');setTimeout(()=>note.classList.remove('show'),2200);}));
-</script></body></html>
+// Pega aquí los Payment Links de Stripe cuando estén listos.
+const enlacesPago = { general: '', vip: '' };
+
+const toast = document.getElementById('toast');
+let temporizador;
+document.querySelectorAll('.pagar').forEach(boton => {
+  boton.addEventListener('click', e => {
+    const url = enlacesPago[boton.dataset.entrada];
+    if (url) { boton.href = url; boton.target = '_blank'; boton.rel = 'noopener'; return; }
+    e.preventDefault();
+    const nombre = boton.dataset.entrada === 'vip' ? 'VIP' : 'General';
+    toast.innerHTML = `El pago en línea de la entrada ${nombre} todavía no está activo. Para reservarla, escríbenos a <a href="mailto:ndiaz@rehobott.com?subject=Reserva%20entrada%20${nombre}%20-%20Despierta%20al%20Capital">ndiaz@rehobott.com</a>.`;
+    toast.classList.add('visible');
+    clearTimeout(temporizador);
+    temporizador = setTimeout(() => toast.classList.remove('visible'), 6000);
+  });
+});
+
+const barra = document.getElementById('barra');
+const alDesplazar = () => barra.classList.toggle('solida', window.scrollY > 40);
+window.addEventListener('scroll', alDesplazar, { passive: true });
+alDesplazar();
+</script>
+</body>
+</html>
